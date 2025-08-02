@@ -67,7 +67,9 @@ const Experience = () => {
         
         <div className="text-center mt-12">
           <a
-            href="#"
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center space-x-2 bg-black text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-gray-800 transition-colors text-sm sm:text-base"
             aria-label="View Full Resume"
           >
