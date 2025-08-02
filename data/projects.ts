@@ -25,4 +25,12 @@ export const projects: Project[] = [
     liveUrl: 'https://www.financio.life',
     featured: true,
   },
+  {
+    id: 'studybuddy',
+    title: 'Study Buddy',
+    description: 'Mobile app that gamifies studying by letting users raise a virtual AI pet companion that grows stronger as they study smarter. Features include scanning textbook pages, taking quizzes, and tracking study progress with a cute animal companion.',
+    technologies: ['React Native', 'Expo', 'TypeScript', 'React Navigation', 'FastAPI', 'SQLite'],
+    githubUrl: 'https://github.com/kristiancorrea/study-buddy-mobile',
+    featured: true,
+  },
 ];
