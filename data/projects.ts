@@ -10,9 +10,28 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'prepbear',
+    title: 'PrepBear',
+    description:
+      'AI-powered interview prep platform that simulates behavioral and technical interviews, integrates company research, and streams real-time voice feedback through the Google Gemini Live API to help applicants feel confident.',
+    technologies: ['React', 'Tailwind CSS', 'TypeScript', 'Google Gemini Live API'],
+    liveUrl: 'https://prepbear.app',
+    featured: true,
+  },
+  {
+    id: 'studybuddy',
+    title: 'Study Buddy',
+    description:
+      'Gamified study companion that lets users earn XP to level up a virtual pet by scanning textbook pages into AI-powered quizzes, complete with dashboards for pet care and learning progress.',
+    technologies: ['React Native', 'Expo', 'TypeScript', 'FastAPI', 'PostgreSQL', 'Docker'],
+    githubUrl: 'https://github.com/KristianCorrea/study-buddy-mobile',
+    featured: true,
+  },
+  {
     id: 'tldr',
     title: 'TLDR',
-    description: 'AI-powered browser extension that summarizes web articles with a single right-click using a BART model, saving users time and helping them avoid clickbait content.',
+    description:
+      'Browser extension that summarizes web articles with a single right-click using a BART model, helping users save time and avoid clickbait.',
     technologies: ['HTML', 'CSS', 'JavaScript', 'Flask', 'Python', 'Bart AI Model'],
     githubUrl: 'https://github.com/KristianCorrea/TLDR',
     featured: true,
@@ -20,17 +39,10 @@ export const projects: Project[] = [
   {
     id: 'financio',
     title: 'Financio',
-    description: 'Financial literacy platform built for ShellHacks 2024. Features budgeting tools, expense tracking, and an AI chatbot for financial guidance. Won 2nd place in Vanguard\'s category.',
+    description:
+      "Financial literacy platform built for ShellHacks 2024 that offers budgeting tools, expense tracking, and an AI chatbot for guidance, earning 2nd place in Vanguard's category.",
     technologies: ['React', 'Next.js', 'MySQL', 'Microsoft Copilot Studio', 'Docker'],
     liveUrl: 'https://www.financio.life',
-    featured: true,
-  },
-  {
-    id: 'studybuddy',
-    title: 'Study Buddy',
-    description: 'Mobile app that gamifies studying by letting users raise a virtual AI pet companion that grows stronger as they study smarter. Features include scanning textbook pages, taking quizzes, and tracking study progress with a cute animal companion.',
-    technologies: ['React Native', 'Expo', 'TypeScript', 'React Navigation', 'FastAPI', 'SQLite'],
-    githubUrl: 'https://github.com/kristiancorrea/study-buddy-mobile',
     featured: true,
   },
 ];
