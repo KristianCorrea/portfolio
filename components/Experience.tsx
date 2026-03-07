@@ -65,16 +65,16 @@ const Experience = () => {
           ))}
         </div>
         
-        <div className="text-center mt-12">
+        <div className="text-center mt-12 flex justify-center">
           <a
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center space-x-2 bg-black text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-gray-800 transition-colors text-sm sm:text-base"
+            className="inline-flex items-center space-x-2 text-sm sm:text-base font-medium text-gray-600 hover:text-black transition-colors underline"
             aria-label="View Full Resume"
           >
-            <span>View Résumé</span>
-            <ExternalLink size={14} className="sm:w-4 sm:h-4" />
+            <span>View Full Resume</span>
+            <ExternalLink size={16} />
           </a>
         </div>
       </div>

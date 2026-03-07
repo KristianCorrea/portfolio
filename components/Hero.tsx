@@ -1,4 +1,4 @@
-import { Mail, Phone, Github, Linkedin } from 'lucide-react';
+import { Mail, Phone, Github, Linkedin, ExternalLink } from 'lucide-react';
 
 const Hero = () => {
   return (
@@ -50,6 +50,18 @@ const Hero = () => {
           >
             <Github size={20} />
             <span className="text-sm sm:text-base">GitHub</span>
+          </a>
+        </div>
+        <div className="mt-8 flex justify-center">
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center space-x-2 bg-black text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-gray-800 transition-colors text-sm sm:text-base"
+            aria-label="View Résumé"
+          >
+            <span>View Résumé</span>
+            <ExternalLink size={16} />
           </a>
         </div>
       </div>
