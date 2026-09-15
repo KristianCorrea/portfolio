@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { Mail, Github, Linkedin, ExternalLink } from 'lucide-react';
+import HeroCodeBackground from '@/components/HeroCodeBackground';
 
 const socialLinks = [
   {
@@ -25,9 +26,10 @@ const Hero = () => {
   return (
     <section
       id="about"
-      className="flex min-h-screen items-center justify-center bg-gradient-to-b from-gray-50 to-white px-4 pt-24 pb-16 sm:px-6"
+      className="relative flex min-h-screen items-center justify-center overflow-hidden bg-gradient-to-b from-gray-50 to-white px-4 pt-24 pb-16 sm:px-6"
     >
-      <div className="mx-auto w-full max-w-xl text-center">
+      <HeroCodeBackground />
+      <div className="relative z-10 mx-auto w-full max-w-xl text-center">
         <div className="mx-auto mb-8 w-fit">
           <div className="rounded-full bg-white p-2 shadow-md ring-1 ring-gray-200/80">
             <Image
