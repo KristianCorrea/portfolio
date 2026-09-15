@@ -1,68 +1,86 @@
-import { Mail, Phone, Github, Linkedin, ExternalLink } from 'lucide-react';
+import Image from 'next/image';
+import { Mail, Github, Linkedin, ExternalLink } from 'lucide-react';
+
+const socialLinks = [
+  {
+    href: 'mailto:kristiangabrielcorrea@gmail.com',
+    label: 'Email',
+    icon: Mail,
+  },
+  {
+    href: 'https://linkedin.com/in/Kristian-Correa',
+    label: 'LinkedIn',
+    icon: Linkedin,
+    external: true,
+  },
+  {
+    href: 'https://github.com/KristianCorrea',
+    label: 'GitHub',
+    icon: Github,
+    external: true,
+  },
+];
 
 const Hero = () => {
   return (
-    <section id="about" className="min-h-screen flex items-center justify-center bg-white">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black mb-4">
+    <section
+      id="about"
+      className="flex min-h-screen items-center justify-center bg-gradient-to-b from-gray-50 to-white px-4 pt-24 pb-16 sm:px-6"
+    >
+      <div className="mx-auto w-full max-w-xl text-center">
+        <div className="mx-auto mb-8 w-fit">
+          <div className="rounded-full bg-white p-2 shadow-md ring-1 ring-gray-200/80">
+            <Image
+              src="/profile.jpeg"
+              alt="Portrait of Kristian Correa"
+              width={220}
+              height={220}
+              priority
+              className="h-[180px] w-[180px] rounded-full object-cover object-[center_22%] sm:h-[220px] sm:w-[220px]"
+            />
+          </div>
+        </div>
+
+        <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
           Kristian Correa
         </h1>
-        <h2 className="text-lg sm:text-xl lg:text-2xl text-gray-600 mb-6">
+        <p className="mt-2 text-lg font-medium text-gray-500 sm:text-xl">
           Software Engineer
-        </h2>
-        <p className="text-base sm:text-lg text-gray-700 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed">
-          Passionate about building intuitive web experiences and solving real-world problems with code.
         </p>
-        
-        <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
-          <a
-            href="tel:786-814-9844"
-            className="flex items-center space-x-2 text-gray-600 hover:text-black transition-colors"
-            aria-label="Phone: 786-814-9844"
-          >
-            <Phone size={20} />
-            <span className="text-sm sm:text-base">786-814-9844</span>
-          </a>
-          <a
-            href="mailto:kristiangabrielcorrea@gmail.com"
-            className="flex items-center space-x-2 text-gray-600 hover:text-black transition-colors"
-            aria-label="Email: kristiangabrielcorrea@gmail.com"
-          >
-            <Mail size={20} />
-            <span className="text-sm sm:text-base">kristiangabrielcorrea@gmail.com</span>
-          </a>
-          <a
-            href="https://linkedin.com/in/Kristian-Correa"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center space-x-2 text-gray-600 hover:text-black transition-colors"
-            aria-label="LinkedIn Profile"
-          >
-            <Linkedin size={20} />
-            <span className="text-sm sm:text-base">LinkedIn</span>
-          </a>
-          <a
-            href="https://github.com/KristianCorrea"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center space-x-2 text-gray-600 hover:text-black transition-colors"
-            aria-label="GitHub Profile"
-          >
-            <Github size={20} />
-            <span className="text-sm sm:text-base">GitHub</span>
-          </a>
-        </div>
+
+        <p className="mx-auto mt-6 max-w-md text-base leading-relaxed text-gray-600 sm:text-lg">
+          Passionate about building intuitive web experiences and solving
+          real-world problems with code.
+        </p>
+
         <div className="mt-8 flex justify-center">
           <a
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center space-x-2 bg-black text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-gray-800 transition-colors text-sm sm:text-base"
+            className="inline-flex items-center gap-2 rounded-full bg-gray-900 px-6 py-2.5 text-sm font-medium text-white shadow-sm transition-colors hover:bg-gray-800 focus-ring"
             aria-label="View Résumé"
           >
             <span>View Résumé</span>
-            <ExternalLink size={16} />
+            <ExternalLink size={15} />
           </a>
+        </div>
+
+        <div className="mt-10 flex items-center justify-center gap-3">
+          {socialLinks.map(({ href, label, icon: Icon, external }) => (
+            <a
+              key={label}
+              href={href}
+              {...(external && {
+                target: '_blank',
+                rel: 'noopener noreferrer',
+              })}
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-500 shadow-sm transition-colors hover:border-gray-300 hover:text-gray-900 focus-ring"
+              aria-label={label}
+            >
+              <Icon size={18} />
+            </a>
+          ))}
         </div>
       </div>
     </section>
