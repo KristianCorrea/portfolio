@@ -15,7 +15,7 @@ export const projects: Project[] = [
     description:
       'An AI-powered interview prep platform that simulates behavioral and technical interviews to help students and jobseekers practice and gain confidence. Integrated real-time voice interviews using the Google Gemini Live API, providing feedback on answer quality.',
     technologies: ['React', 'Tailwind CSS', 'TypeScript', 'Google Gemini Live API'],
-    liveUrl: 'https://prepbear.app',
+    liveUrl: 'https://bear-necessities.vercel.app/',
     featured: true,
   },
   {

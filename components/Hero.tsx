@@ -1,13 +1,7 @@
 import Image from 'next/image';
-import { Mail, Github, Linkedin, ExternalLink, Globe } from 'lucide-react';
+import { Mail, Github, Linkedin, ExternalLink } from 'lucide-react';
 
 const socialLinks = [
-  {
-    href: 'https://kristiancorrea.dev',
-    label: 'Website',
-    icon: Globe,
-    external: true,
-  },
   {
     href: 'mailto:kristiangabrielcorrea@gmail.com',
     label: 'Email',
