@@ -3,25 +3,36 @@ import { ExternalLink } from 'lucide-react';
 const Experience = () => {
   const experiences = [
     {
-      title: 'Software Engineering Intern',
+      title: 'Full-Stack Development Instructor',
+      company: 'Florida International University (KFSCIS)',
+      date: 'Feb 2026 – Apr 2026',
+      summary:
+        'Selected as one of 10 facilitators for the Advanced Web Development track in the Break Through Tech Sprinternship program, teaching 25–30 students through a 7-week intensive. Created course curriculum and mentored students in full-stack web development, preparing them for matched internships through hands-on projects and industry-focused technical training.',
+      skills: ['Full-Stack Development', 'React', 'Next.js', 'Curriculum Design', 'Mentoring'],
+    },
+    {
+      title: 'Software Engineering Intern (BTT Sprinternship)',
       company: 'UKG (Ultimate Kronos Group)',
-      date: 'May 2025',
-      summary: 'Worked in an Agile team to build an AI-powered internal tool for managers to identify skill gaps and recommend development paths. Built with Spring Boot, OpenAI API, PostgreSQL, Docker, React, and Next.js. Presented to 50+ engineers and stakeholders.',
-      skills: ['Spring Boot', 'OpenAI API', 'PostgreSQL', 'Docker', 'React', 'Next.js', 'Agile'],
+      date: 'May 2025 – Jun 2025',
+      summary:
+        'Built an AI-powered internal tool that helps managers identify skill gaps and recommend development paths using real-time employee competency data. Developed a Java Spring Boot backend integrated with the OpenAI API, a PostgreSQL database containerized with Docker, and a responsive frontend built with React and Next.js.',
+      skills: ['Spring Boot', 'OpenAI API', 'PostgreSQL', 'Docker', 'React', 'Next.js'],
     },
     {
       title: 'Front-End Engineer',
       company: 'Law Detail',
-      date: 'Apr 2024 – Aug 2024',
-      summary: 'Collaborated with developers to build data visualization tools using React and TypeScript. Created interactive charts and graphs with advanced filtering options for legal professionals to analyze data effectively.',
-      skills: ['React', 'TypeScript', 'Data Visualization', 'Charts', 'UI/UX'],
+      date: 'Mar 2024 – Aug 2024',
+      summary:
+        'Developed the frontend using React and TypeScript, creating responsive pages and components for legal professionals to explore court case data. Integrated dynamic filtering and search tools by connecting the UI to backend APIs, enabling users to refine and analyze large datasets in real time. Built interactive dashboards and data visualizations with ReCharts.',
+      skills: ['React', 'TypeScript', 'ReCharts', 'Data Visualization', 'REST APIs'],
     },
     {
       title: 'Computer Science Tutor & Lab IT',
-      company: 'MDC School of Engineering and Technology',
+      company: 'Miami Dade College',
       date: 'Jan 2023 – Present',
-      summary: 'Mentored over 150 students in programming languages, improving average grades by 20%. Provided technical support and maintained computer lab equipment for optimal learning environments.',
-      skills: ['Java', 'Python', 'C++', 'Mentoring', 'Technical Support', 'Lab Management'],
+      summary:
+        'Mentored over 150 students in Java, Python, and C++, assisting with projects, homework, and exam preparation, on average improving student grades by 20%.',
+      skills: ['Java', 'Python', 'C++', 'Mentoring', 'Lab IT'],
     },
   ];
 
@@ -31,10 +42,13 @@ const Experience = () => {
         <h2 className="text-2xl sm:text-3xl font-bold text-black mb-8 sm:mb-12 text-center">
           Experience
         </h2>
-        
+
         <div className="space-y-6 sm:space-y-8">
           {experiences.map((exp, index) => (
-            <div key={index} className="bg-white rounded-lg p-4 sm:p-6 lg:p-8 shadow-sm border border-gray-200">
+            <div
+              key={index}
+              className="bg-white rounded-lg p-4 sm:p-6 lg:p-8 shadow-sm border border-gray-200"
+            >
               <div className="mb-4">
                 <p className="text-sm text-gray-600 font-medium mb-2">
                   {exp.date}
@@ -46,11 +60,11 @@ const Experience = () => {
                   {exp.company}
                 </p>
               </div>
-              
+
               <p className="text-sm sm:text-base text-gray-700 leading-relaxed mb-4">
                 {exp.summary}
               </p>
-              
+
               <div className="flex flex-wrap gap-2">
                 {exp.skills.map((skill) => (
                   <span
@@ -64,7 +78,7 @@ const Experience = () => {
             </div>
           ))}
         </div>
-        
+
         <div className="text-center mt-12 flex justify-center">
           <a
             href="/resume.pdf"
